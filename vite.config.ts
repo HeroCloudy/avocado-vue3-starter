@@ -8,6 +8,7 @@ import eslint from 'vite-plugin-eslint'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
+import Components from 'unplugin-vue-components/vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
@@ -27,6 +28,10 @@ export default defineConfig({
         /\.md$/ // .md
       ],
       imports: ['vue', VueRouterAutoImports, '@vueuse/core']
+    }),
+    Components({
+      deep: true,
+      directoryAsNamespace: false
     }),
     vueDevTools()
   ],
