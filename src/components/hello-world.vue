@@ -9,4 +9,10 @@ defineProps<{
   msg: string
 }>()
 </script>
-<style scoped></style>
+<style scoped lang="scss">
+.greetings {
+  h3 {
+    color: rebeccapurple;
+  }
+}
+</style>
