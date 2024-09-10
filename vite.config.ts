@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import VueRouter from 'unplugin-vue-router/vite'
 import eslint from 'vite-plugin-eslint'
+import UnoCSS from 'unocss/vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
@@ -15,6 +16,7 @@ export default defineConfig({
     vue(),
     vueJsx(),
     eslint(),
+    UnoCSS(),
     vueDevTools()
   ],
   resolve: {

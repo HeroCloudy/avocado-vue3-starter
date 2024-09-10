@@ -12,7 +12,7 @@ defineProps<{
 <style scoped lang="scss">
 .greetings {
   h3 {
-    color: rebeccapurple;
+    @apply text-blue text-xl font-bold;
   }
 }
 </style>
