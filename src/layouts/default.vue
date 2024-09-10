@@ -11,8 +11,6 @@
       <router-link to="/about" class="item">about</router-link>
     </header>
     <router-view></router-view>
-
-    <footer>default common footer</footer>
   </div>
 </template>
 
@@ -21,13 +19,7 @@ console.log('default')
 </script>
 
 <style scoped lang="scss">
-header {
-  @apply ml-30px;
-}
 .item {
   @apply line-height-loose mr-3;
-}
-footer {
-  @apply text-sm text-gray mt-5;
 }
 </style>
