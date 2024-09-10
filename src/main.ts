@@ -1,13 +1,12 @@
-import { createApp } from 'vue'
+import type { App, Component } from 'vue'
+import HelloWorld from '@/components/hello-world.vue'
 
-import App from './App.vue'
-import { installRouter } from './router'
-import '@/plugins/assets'
-import { installStore } from '@/stores'
+const components: Component[] = [HelloWorld]
 
-const app = createApp(App)
+export const install = (app: App): void => {
+  components.forEach((component) => {
+    app.component(component.name!, component)
+  })
+}
 
-installRouter(app)
-installStore(app)
-
-app.mount('#app')
+export { HelloWorld }
