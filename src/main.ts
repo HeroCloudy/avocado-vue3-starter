@@ -1,4 +1,5 @@
 import type { App, Component } from 'vue'
+import '@/plugins/assets'
 import HelloWorld from '@/components/hello-world.vue'
 
 const components: Component[] = [HelloWorld]
