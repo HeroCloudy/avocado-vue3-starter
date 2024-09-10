@@ -1,6 +1,6 @@
 <template>
   <div>
-    <hello-world msg="home page" />
+    <hello-world :msg="msg" />
     <div class="text-3xl bg-red w-300px h-200px">
       <!-- A basic anchor icon from Phosphor icons -->
       <div class="i-ph-anchor-simple-thin" />
@@ -15,8 +15,16 @@
         class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy"
       />
     </div>
+
+    <div>
+      useToggle: {{ isShow }}
+      <button @click="toggle()">toggle show</button>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
 import HelloWorld from '../components/hello-world.vue'
+
+const [isShow, toggle] = useToggle()
+const msg = ref('demo')
 </script>
