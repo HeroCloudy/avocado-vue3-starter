@@ -2,16 +2,16 @@
 
 基于 vue3 + vite 全家桶项目，整合了 Vue Router、Pinia、UnoCSS、SCSS 及其他常用第三方插件。 涉及到插件包括：
 
-| 插件名                     | 版本 | 描述       | git 地址                                                   |
-|-------------------------|----|----------|----------------------------------------------------------|
-| unocss                  | v  | 原子化 CSS  | https://unocss.dev/                                      |
-| unplugin-vue-router     | v  | 自动路由     | https://github.com/posva/unplugin-vue-router             |
-| unplugin-auto-import    | v  | 自动导入     | https://github.com/unplugin/unplugin-auto-import         |
-| vueuse                  | v  | 常用 hooks | https://vueuse.org/                                      |
-| unplugin-vue-components | v  | 组件自动注册   | https://github.com/unplugin/unplugin-vue-components      |
-| vite-plugin-vue-layouts | v  | 布局       | https://github.com/JohnCampionJr/vite-plugin-vue-layouts |
-| vite-plugin-pwa         | v  | pwa插件    | https://github.com/vite-pwa/vite-plugin-pwa              |
-| vite-plugin-mock        | v  | mock     | https://github.com/vbenjs/vite-plugin-mock               |
+| 插件名                     | 版本      | 描述       | git 地址                                                   |
+|-------------------------|---------|----------|----------------------------------------------------------|
+| unocss                  | v       | 原子化 CSS  | https://unocss.dev/                                      |
+| unplugin-vue-router     | ^0.10.8 | 自动路由     | https://github.com/posva/unplugin-vue-router             |
+| unplugin-auto-import    | v       | 自动导入     | https://github.com/unplugin/unplugin-auto-import         |
+| vueuse                  | v       | 常用 hooks | https://vueuse.org/                                      |
+| unplugin-vue-components | v       | 组件自动注册   | https://github.com/unplugin/unplugin-vue-components      |
+| vite-plugin-vue-layouts | v       | 布局       | https://github.com/JohnCampionJr/vite-plugin-vue-layouts |
+| vite-plugin-pwa         | v       | pwa插件    | https://github.com/vite-pwa/vite-plugin-pwa              |
+| vite-plugin-mock        | v       | mock     | https://github.com/vbenjs/vite-plugin-mock               |
 
 ## Project Setup
 
