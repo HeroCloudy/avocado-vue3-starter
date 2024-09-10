@@ -13,6 +13,12 @@
 | vite-plugin-pwa         | v       | pwa插件    | https://github.com/vite-pwa/vite-plugin-pwa              |
 | vite-plugin-mock        | v       | mock     | https://github.com/vbenjs/vite-plugin-mock               |
 
+
+## 分支介绍
+
+- main： 开发分支，公共的内容会提交到该分支
+- basic-template： 最简分支。没有任何测试和演示代码。如果需要空工程可拉取该分支。
+
 ## Project Setup
 
 ```sh
