@@ -4,10 +4,10 @@ import HelloWorld from '@/components/hello-world.vue'
 
 const components: Component[] = [HelloWorld]
 
-export const install = (app: App): void => {
-  components.forEach((component) => {
-    app.component(component.name!, component)
-  })
+export default {
+  install: (app: App) => {
+    components.forEach((c) => app.component(`avo-${c.name}`, c))
+  }
 }
 
 export { HelloWorld }

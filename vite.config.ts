@@ -9,6 +9,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { resolve } from 'path'
 import pkg from './package.json'
+import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -29,6 +30,11 @@ export default defineConfig({
     Components({
       deep: true,
       directoryAsNamespace: false
+    }),
+    dts({
+      tsconfigPath: './tsconfig.app.json',
+      copyDtsFiles: true,
+      rollupTypes: true
     })
   ],
   resolve: {
@@ -40,8 +46,8 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/main.ts'),
       name: pkg.name,
-      formats: ['es', 'umd', 'cjs'],
-      fileName: (format) => `${pkg.name}.${format}.js`
+      formats: ['es', 'umd'],
+      fileName: (format) => `index.${format}.js`
     },
     rollupOptions: {
       // 确保外部化处理那些你不想打包进库的依赖
@@ -50,9 +56,12 @@ export default defineConfig({
         // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
         globals: {
           vue: 'Vue'
-        }
+        },
+        exports: 'named'
       }
     },
-    sourcemap: true
+    sourcemap: true,
+    cssCodeSplit: false,
+    cssMinify: true
   }
 })

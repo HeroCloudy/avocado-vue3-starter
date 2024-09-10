@@ -1,12 +1,25 @@
 {
   "name": "avocado-vue3-component",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "type": "module",
+  "main": "./dist/index.es.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.es.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.es.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
+    "build:watch": "run-p type-check \"build-only {@}\" -- --watch",
     "test:unit": "vitest",
     "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
     "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
@@ -45,6 +58,7 @@
     "unplugin-auto-import": "^0.18.2",
     "unplugin-vue-components": "^0.27.4",
     "vite": "^5.3.1",
+    "vite-plugin-dts": "^4.2.1",
     "vite-plugin-eslint": "^1.8.1",
     "vitest": "^1.6.0",
     "vue-tsc": "^2.0.21"
