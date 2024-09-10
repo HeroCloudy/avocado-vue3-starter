@@ -20,9 +20,22 @@
       useToggle: {{ isShow }}
       <button @click="toggle()">toggle show</button>
     </div>
+
+    <div>
+      <h3>Pinia</h3>
+      <p>count: {{ count }}, double count: {{ doubleCount }}</p>
+      <button @click="increment">Increment Btn</button>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
+import { storeToRefs } from 'pinia'
+import { useCounterStore } from '@/stores/counter'
+
 const [isShow, toggle] = useToggle()
 const msg = ref('demo')
+
+const counterStore = useCounterStore()
+const { count, doubleCount } = storeToRefs(counterStore)
+const { increment } = counterStore
 </script>
